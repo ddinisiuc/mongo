@@ -31,7 +31,7 @@ class ElasticController extends Controller
         $product = Product::with('category');
         $category = Category::get();
         $product = (new ProductFilter($product, $request))->apply()->get();
-        // dd($product->last());
+         dd($product->last());
         return view('home', compact('product', 'category'));
     }
 
