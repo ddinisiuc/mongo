@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Product;
+use App\Infos;
 use Illuminate\Http\Request;
 use App\Traits\ElasticBuilder;
 use App\Filters\ProductFilter;
@@ -28,6 +29,8 @@ class ElasticController extends Controller
         //     ]
         // ]);
         // dd();
+        $or = Product::where('_id', '5ede0b18cd61000072005552')->first();
+        dd($or->infos);
         $product = Product::with('category');
         $category = Category::get();
         $product = (new ProductFilter($product, $request))->apply()->get();

@@ -48,7 +48,7 @@
                      <td>{{ $item->title }}</td>
                      <td>{{ $item->description }}</td>
                      <td>{{ $item->slug }}</td>
-                     <td >{{ $item->category->title }}</td>
+                     <td >{{ $item->category->title ?? '' }}</td>
                      <td>{{ $item->status }}</td>
                      <td>
                          <form method="post" action="{{ route('delete_product') }}">
