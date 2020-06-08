@@ -14,20 +14,20 @@ class CategoryObserver
      * @param  \App\Category  $category
      * @return void
      */
-    public function created(Category $category)
-    {
-        $es = [
-            'index' => 'categories',
-            'type' =>'categories',
-            'id' => $category->_id,
-            'body'=> [
-                'title' => $category->title,
-                'description' => $category->description
-            ]
-        ];
-        $index = $this->client()->index($es);
-
-    }
+//    public function created(Category $category)
+//    {
+//        $es = [
+//            'index' => 'categories',
+//            'type' =>'categories',
+//            'id' => $category->_id,
+//            'body'=> [
+//                'title' => $category->title,
+//                'description' => $category->description
+//            ]
+//        ];
+//        $index = $this->client()->index($es);
+//
+//    }
 
     /**
      * Handle the category "updated" event.
